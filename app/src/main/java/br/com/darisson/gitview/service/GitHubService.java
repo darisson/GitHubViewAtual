@@ -24,7 +24,6 @@ public class GitHubService extends BaseGitHubService {
             public void onResponse(Call<Owner> call, Response<Owner> response) {
 
                 if (response.isSuccessful()){
-                    deleteRepository();
                     salvaOwner(response.body());
                     EventBus.getDefault().post(new RequestOwnerSuccessfulEvent(response.body().getId()));
                 }else{
@@ -121,11 +120,12 @@ public class GitHubService extends BaseGitHubService {
         }
     }
 
-    public List<Repository> getListRepository(){
+    public List<Repository> getListRepository(Integer id){
         Realm realm = Realm.getDefaultInstance();
 
         List<Repository> repositories = realm
                 .where(Repository.class)
+                .equalTo("owner.id", id)
                 .findAll();
         if (repositories != null) {
             return realm.copyFromRealm(repositories);
@@ -134,7 +134,7 @@ public class GitHubService extends BaseGitHubService {
         }
     }
 
-    public void deleteRepository(){
+    public void clearAppData(){
         Realm realm = Realm.getDefaultInstance();
         realm.beginTransaction();
         realm.deleteAll();

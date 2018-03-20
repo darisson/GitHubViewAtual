@@ -71,7 +71,7 @@ public class RepositoryActivity extends BaseActivity {
 
     @Subscribe
     public void onEvent(RequestRepositorySuccessfulEvent event){
-        adapter.setItems(gitHubService.getListRepository());
+        adapter.setItems(gitHubService.getListRepository(idOwner));
         recyclerView.setAdapter(adapter);
         dismissProgressDialog();
     }

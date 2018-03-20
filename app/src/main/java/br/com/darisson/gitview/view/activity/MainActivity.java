@@ -12,7 +12,6 @@ import org.greenrobot.eventbus.Subscribe;
 import br.com.darisson.gitview.R;
 import br.com.darisson.gitview.event.RequestFailedEvent;
 import br.com.darisson.gitview.event.RequestOwnerSuccessfulEvent;
-import br.com.darisson.gitview.model.Owner;
 import br.com.darisson.gitview.service.GitHubService;
 
 @EActivity(R.layout.activity_main)
@@ -29,7 +28,7 @@ public class MainActivity extends BaseActivity {
 
     @AfterViews
     public void afterViews(){
-        gitHubService.deleteRepository();
+        gitHubService.clearAppData();
 
     }
 
