@@ -1,0 +1,17 @@
+package br.com.darisson.gitview.event;
+
+public class RepositoryClickEvent {
+    private int id;
+
+    public RepositoryClickEvent(int id) {
+        this.id = id;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+}

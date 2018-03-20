@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">GitView</string>
+    <string name="github_viewer">Github Viewer</string>
+    <string name="botao_busca">Buscar</string>
+    <string name="usuario_git">usuario</string>
+    <string name="err_message">Ocorreu um erro de rede. Verifique sua conexão com a Internet e tente novamente mais tarde.</string>
+    <string name="err_usuaruio">Usuário não encontrado. Favor inserir outro nome.</string>
+    <string name="usuario">Usuario</string>
+    <string name="user_erro">Digite algum usuário.</string>
+    <string name="repositorio">Repositorio</string>
+    <string name="descricao">Descrição</string>
+    <string name="linguagem">Linguagem de Programação</string>
+    <string name="tipo_linguagem">Linguagem</string>
+    <string name="contribuidores">Contribuidores</string>
+    <string name="txt_no_contributors">Não possui contribuidor</string>
+
+
+
+
+</resources>
